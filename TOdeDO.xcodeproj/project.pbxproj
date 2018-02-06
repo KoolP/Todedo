@@ -8,24 +8,61 @@
 
 /* Begin PBXBuildFile section */
 		94445BC2201B221400057B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94445BC1201B221400057B03 /* AppDelegate.m */; };
-		94445BC5201B221400057B03 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94445BC4201B221400057B03 /* ViewController.m */; };
 		94445BC8201B221400057B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94445BC6201B221400057B03 /* Main.storyboard */; };
 		94445BCA201B221400057B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94445BC9201B221400057B03 /* Assets.xcassets */; };
 		94445BCD201B221400057B03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94445BCB201B221400057B03 /* LaunchScreen.storyboard */; };
 		94445BD0201B221400057B03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94445BCF201B221400057B03 /* main.m */; };
+		94445BD8201B260500057B03 /* TodoMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 94445BD7201B260500057B03 /* TodoMachine.m */; };
+		94445BE1201B78CD00057B03 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94445BE0201B78CD00057B03 /* TestViewController.m */; };
+		94E3C6EE201F3CD3001C84EB /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6E4201F3CCB001C84EB /* OpenSans-LightItalic.ttf */; };
+		94E3C6EF201F3CD3001C84EB /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6E5201F3CCC001C84EB /* OpenSans-SemiBold.ttf */; };
+		94E3C6F0201F3CD3001C84EB /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6E6201F3CCC001C84EB /* OpenSans-Light.ttf */; };
+		94E3C6F1201F3CD3001C84EB /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6E7201F3CCD001C84EB /* OpenSans-Regular.ttf */; };
+		94E3C6F2201F3CD3001C84EB /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6E8201F3CCE001C84EB /* OpenSans-Bold.ttf */; };
+		94E3C6F3201F3CD3001C84EB /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6E9201F3CCF001C84EB /* OpenSans-BoldItalic.ttf */; };
+		94E3C6F4201F3CD3001C84EB /* OpenSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6EA201F3CD0001C84EB /* OpenSans-SemiBoldItalic.ttf */; };
+		94E3C6F5201F3CD3001C84EB /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6EB201F3CD0001C84EB /* OpenSans-ExtraBoldItalic.ttf */; };
+		94E3C6F6201F3CD3001C84EB /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6EC201F3CD1001C84EB /* OpenSans-Italic.ttf */; };
+		94E3C6F7201F3CD3001C84EB /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6ED201F3CD2001C84EB /* OpenSans-ExtraBold.ttf */; };
+		94E3C6FA201F4223001C84EB /* SimpleAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3C6F9201F4223001C84EB /* SimpleAddViewController.m */; };
+		94E3C6FD201F5F3C001C84EB /* SimpleDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3C6FC201F5F3C001C84EB /* SimpleDeleteViewController.m */; };
+		94E3C6FF201F6151001C84EB /* BRINGTHANOIZE.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6FE201F6150001C84EB /* BRINGTHANOIZE.TTF */; };
+		94E3C70520211B33001C84EB /* ToDoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3C70420211B33001C84EB /* ToDoTableViewController.m */; };
+		94E3C70820271E68001C84EB /* ToDoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 94E3C70720271E68001C84EB /* ToDoTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		94445BBD201B221400057B03 /* TOdeDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOdeDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94445BC0201B221400057B03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94445BC1201B221400057B03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		94445BC3201B221400057B03 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		94445BC4201B221400057B03 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		94445BC7201B221400057B03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		94445BC9201B221400057B03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94445BCC201B221400057B03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94445BCE201B221400057B03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94445BCF201B221400057B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		94445BD6201B260500057B03 /* TodoMachine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoMachine.h; sourceTree = "<group>"; };
+		94445BD7201B260500057B03 /* TodoMachine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoMachine.m; sourceTree = "<group>"; };
+		94445BDF201B78CD00057B03 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		94445BE0201B78CD00057B03 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		94E3C6E4201F3CCB001C84EB /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		94E3C6E5201F3CCC001C84EB /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		94E3C6E6201F3CCC001C84EB /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		94E3C6E7201F3CCD001C84EB /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		94E3C6E8201F3CCE001C84EB /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		94E3C6E9201F3CCF001C84EB /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		94E3C6EA201F3CD0001C84EB /* OpenSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		94E3C6EB201F3CD0001C84EB /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		94E3C6EC201F3CD1001C84EB /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		94E3C6ED201F3CD2001C84EB /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		94E3C6F8201F4223001C84EB /* SimpleAddViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleAddViewController.h; sourceTree = "<group>"; };
+		94E3C6F9201F4223001C84EB /* SimpleAddViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleAddViewController.m; sourceTree = "<group>"; };
+		94E3C6FB201F5F3C001C84EB /* SimpleDeleteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleDeleteViewController.h; sourceTree = "<group>"; };
+		94E3C6FC201F5F3C001C84EB /* SimpleDeleteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleDeleteViewController.m; sourceTree = "<group>"; };
+		94E3C6FE201F6150001C84EB /* BRINGTHANOIZE.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = BRINGTHANOIZE.TTF; sourceTree = "<group>"; };
+		94E3C70320211B33001C84EB /* ToDoTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewController.h; sourceTree = "<group>"; };
+		94E3C70420211B33001C84EB /* ToDoTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewController.m; sourceTree = "<group>"; };
+		94E3C70620271E68001C84EB /* ToDoTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToDoTableViewCell.h; sourceTree = "<group>"; };
+		94E3C70720271E68001C84EB /* ToDoTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToDoTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +97,44 @@
 			children = (
 				94445BC0201B221400057B03 /* AppDelegate.h */,
 				94445BC1201B221400057B03 /* AppDelegate.m */,
-				94445BC3201B221400057B03 /* ViewController.h */,
-				94445BC4201B221400057B03 /* ViewController.m */,
+				94445BD6201B260500057B03 /* TodoMachine.h */,
+				94445BD7201B260500057B03 /* TodoMachine.m */,
+				94E3C6FB201F5F3C001C84EB /* SimpleDeleteViewController.h */,
+				94E3C6FC201F5F3C001C84EB /* SimpleDeleteViewController.m */,
 				94445BC6201B221400057B03 /* Main.storyboard */,
+				94E3C70320211B33001C84EB /* ToDoTableViewController.h */,
+				94E3C70420211B33001C84EB /* ToDoTableViewController.m */,
+				94E3C70620271E68001C84EB /* ToDoTableViewCell.h */,
+				94E3C70720271E68001C84EB /* ToDoTableViewCell.m */,
+				94E3C6F8201F4223001C84EB /* SimpleAddViewController.h */,
+				94E3C6F9201F4223001C84EB /* SimpleAddViewController.m */,
+				94445BDF201B78CD00057B03 /* TestViewController.h */,
+				94445BE0201B78CD00057B03 /* TestViewController.m */,
 				94445BC9201B221400057B03 /* Assets.xcassets */,
+				94E3C6E3201F3C01001C84EB /* Fonts */,
 				94445BCB201B221400057B03 /* LaunchScreen.storyboard */,
 				94445BCE201B221400057B03 /* Info.plist */,
 				94445BCF201B221400057B03 /* main.m */,
 			);
 			path = TOdeDO;
+			sourceTree = "<group>";
+		};
+		94E3C6E3201F3C01001C84EB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				94E3C6FE201F6150001C84EB /* BRINGTHANOIZE.TTF */,
+				94E3C6E8201F3CCE001C84EB /* OpenSans-Bold.ttf */,
+				94E3C6E9201F3CCF001C84EB /* OpenSans-BoldItalic.ttf */,
+				94E3C6ED201F3CD2001C84EB /* OpenSans-ExtraBold.ttf */,
+				94E3C6EB201F3CD0001C84EB /* OpenSans-ExtraBoldItalic.ttf */,
+				94E3C6EC201F3CD1001C84EB /* OpenSans-Italic.ttf */,
+				94E3C6E6201F3CCC001C84EB /* OpenSans-Light.ttf */,
+				94E3C6E4201F3CCB001C84EB /* OpenSans-LightItalic.ttf */,
+				94E3C6E7201F3CCD001C84EB /* OpenSans-Regular.ttf */,
+				94E3C6E5201F3CCC001C84EB /* OpenSans-SemiBold.ttf */,
+				94E3C6EA201F3CD0001C84EB /* OpenSans-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +195,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94E3C6F0201F3CD3001C84EB /* OpenSans-Light.ttf in Resources */,
 				94445BCD201B221400057B03 /* LaunchScreen.storyboard in Resources */,
+				94E3C6F2201F3CD3001C84EB /* OpenSans-Bold.ttf in Resources */,
 				94445BCA201B221400057B03 /* Assets.xcassets in Resources */,
+				94E3C6F4201F3CD3001C84EB /* OpenSans-SemiBoldItalic.ttf in Resources */,
+				94E3C6F1201F3CD3001C84EB /* OpenSans-Regular.ttf in Resources */,
+				94E3C6EF201F3CD3001C84EB /* OpenSans-SemiBold.ttf in Resources */,
+				94E3C6F3201F3CD3001C84EB /* OpenSans-BoldItalic.ttf in Resources */,
+				94E3C6EE201F3CD3001C84EB /* OpenSans-LightItalic.ttf in Resources */,
+				94E3C6FF201F6151001C84EB /* BRINGTHANOIZE.TTF in Resources */,
+				94E3C6F6201F3CD3001C84EB /* OpenSans-Italic.ttf in Resources */,
+				94E3C6F5201F3CD3001C84EB /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				94445BC8201B221400057B03 /* Main.storyboard in Resources */,
+				94E3C6F7201F3CD3001C84EB /* OpenSans-ExtraBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94445BC5201B221400057B03 /* ViewController.m in Sources */,
 				94445BD0201B221400057B03 /* main.m in Sources */,
 				94445BC2201B221400057B03 /* AppDelegate.m in Sources */,
+				94E3C70520211B33001C84EB /* ToDoTableViewController.m in Sources */,
+				94445BD8201B260500057B03 /* TodoMachine.m in Sources */,
+				94E3C6FA201F4223001C84EB /* SimpleAddViewController.m in Sources */,
+				94445BE1201B78CD00057B03 /* TestViewController.m in Sources */,
+				94E3C6FD201F5F3C001C84EB /* SimpleDeleteViewController.m in Sources */,
+				94E3C70820271E68001C84EB /* ToDoTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

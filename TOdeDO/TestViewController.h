@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TestViewController.h
 //  TOdeDO
 //
 //  Created by Patrik Rikama Hinnenberg on 2018-01-26.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TestViewController : UITableViewController
 
 @end
-
