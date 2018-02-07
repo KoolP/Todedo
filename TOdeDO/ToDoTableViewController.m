@@ -21,6 +21,8 @@
     
     //"Skapa modellen här" -Erik
     self.todomachine = [[TodoMachine alloc] init];
+     //Test a cellrow
+    //self.todomachine.todosArray = @[@{@"noteTitle" : @"Kolla", @"taskNote" : @"jeppejeppa", @"starButtonValue" : @"YES"}, @{@"noteTitle" : @"Tsiigaa", @"taskNote" : @"jut", @"starButtonValue" : @"NO"}].mutableCopy;
 
     //Skapa custom nav patplusbutton
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"patplus.png"] style:UIBarButtonItemStylePlain target:self action:@selector(addNoteButtonPushed:)];
@@ -56,18 +58,42 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 0;
+    return self.todomachine.todosArray.count;
     
 }
+
 
 //Indexpath innehåller section och row,pointer mot cell
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ToDoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"toDoCell" forIndexPath:indexPath];
-    //Test configure cell
+    
+    // Configure the cell
+    //NSDictionary *theDictionary = self.todomachine.todosArray[indexPath.row];
+    //NSDictionary *theDictionary = [self.todomachine getTaskForRow:indexPath.row];
+    cell.todoTitle.text = self.todomachine.todosArray[indexPath.row];
+    cell.todoNote.text = self.todomachine.todosArray[indexPath.row];
+    cell.todoStar.image = self.todomachine.todosArray[indexPath.row];
+    if ([[self.todomachine.noteDictionary objectForKey:@"starButtonValue"] isEqualToString:@"YES"]) {
+        cell.todoStar.image = [UIImage imageNamed:@"patrikStar4.png"];
+    }
+    
+    /*
+    cell.todoTitle.text = theDictionary[@"noteTitle"];
+    cell.todoNote.text = theDictionary[@"taskNotes"];
+     */
+    
+    //Logs
+    //NSLog(@"Dictionary: %@", [theDictionary description]);
+    /*//Test configure cell
+    cell.todoTitle.text = [self.todomachine.noteDictionary objectForKey:@"noteTitle"];
+    cell.todoNote.text = [self.todomachine.noteDictionary objectForKey:@"taskNotes"];
+    if ([[self.todomachine.noteDictionary objectForKey:@"starButtonValue"] isEqualToString:@"YES"]) {
+        cell.todoStar.image = [UIImage imageNamed:@"patrikStar4.png"];
+    }*/
     
     // Configure the cell
     //NSMutableArray *toDoArray = [[NSMutableArray alloc]init];
-    /*NSDictionary *theDictionary = [self.todomachine getTaskForRow:indexPath.row];*/
+    //NSDictionary *theDictionary = [self.todomachine getTaskForRow:indexPath.row];
     
     /*for (NSString *text in self.todomachine.todos) {
         NSLog(@"%@",text);
@@ -83,6 +109,7 @@
     
     return cell;
 }
+
 
 
 /*
@@ -119,14 +146,19 @@
 }
 */
 
-/* ERIcS ADVICE - SEGUE addviemodelcontrollern här!
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    UITableViewCell *cell = sender;
+    UIViewController *taskEdit = [segue destinationViewController];
+
+    taskEdit.title = cell.todoTitle.text;
+    
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
 @end

@@ -11,13 +11,12 @@
 @interface TodoMachine : NSObject
 
 @property NSString *testmessage;
-@property (nonatomic) NSMutableArray *todos;
-@property (nonatomic) NSDictionary *noteDictonary;
+@property (nonatomic) NSMutableArray *todosArray;
+@property (nonatomic) NSDictionary *noteDictionary;
 
 - (void) addTask:(NSString*)taskTitle taskNotes:(NSString*)taskNote starButton:(NSString*)starButtonValue;
 
-//- (NSInteger) numberOfTasks;
-
-//-(NSDictionary*)getTaskForRow:(NSInteger)rowNumber;
+- (NSInteger) numberOfTasks;
+- (NSDictionary*)getTaskForRow:(NSInteger)rowNumber;
 
 @end

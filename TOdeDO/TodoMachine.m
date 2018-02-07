@@ -23,24 +23,29 @@
 
 
 - (void) addTask:(NSString*)taskTitle taskNotes:(NSString*)taskNote starButton:(NSString*)starButtonValue {
+    
+    self.todosArray = [[NSMutableArray alloc]init];
+    NSDictionary *noteDictionary = @{@"noteTitle":taskTitle,@"taskNotes":taskNote,@"starButtonValue":starButtonValue};
+    
+    [self.todosArray addObject:noteDictionary];
+    
+    //Logs
     NSLog(@"Entered addTask method!");
-    self.todos = [[NSMutableArray alloc]init];
-    NSDictionary *noteDictionary = @[@{@"noteTitle":taskTitle,@"taskNotes":taskNote,@"starButtonValue":starButtonValue}].mutableCopy;
-    [self.todos addObject:noteDictionary];
-    for (NSString *text in self.todos) {
-        NSLog(@"%@",text);
-    }
+    //Log dictionary
+    NSLog(@"Dictionary: %@", [noteDictionary description]);
+    //NS Log Array cotent / count
+    NSLog(@"%@",self.todosArray);
+    NSLog(@"%lu",(unsigned long)self.todosArray.count);
     
 }
 
-/*-(NSDictionary*) getTaskForRow:(NSInteger)rowNumber {
-    return [self.todos.mutableCopy objectAtIndex:rowNumber];
-}*/
-
-/*- (NSInteger) numberOfTasks {
-    NSLog(@"Number of tasks: %ld", self.todos.count);
-    return self.todos.count;
-}*/
+-(NSDictionary*) getTaskForRow:(NSInteger)rowNumber {
+    return [self.todosArray.mutableCopy objectAtIndex:rowNumber];
+}
+- (NSInteger) numberOfTasks {
+    NSLog(@"Number of tasks: %ld", self.todosArray.count);
+    return self.todosArray.count;
+}
 
 /*//skapa AddedTask dictonary
 -(void)fillDictionary: (NSString*)taskTitle taskNotes:(NSString*)taskNote starButton:(BOOL)starButtonValue{
