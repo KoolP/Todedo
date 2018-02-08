@@ -62,7 +62,7 @@
                                     <outlet property="todoNote" destination="Ats-id-L5S" id="1p5-Ru-RFC"/>
                                     <outlet property="todoStar" destination="c4s-xO-Rde" id="Pf4-jS-LKQ"/>
                                     <outlet property="todoTitle" destination="Tz4-cR-6g5" id="QtJ-BD-dSk"/>
-                                    <segue destination="tF4-gJ-Sp8" kind="show" id="WqN-WI-uhf"/>
+                                    <segue destination="tF4-gJ-Sp8" kind="show" identifier="editSegue" id="WqN-WI-uhf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -246,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="2732" y="498"/>
         </scene>
-        <!--Delete ToDo-->
+        <!--Edit ToDo-->
         <scene sceneID="3D9-au-V0D">
             <objects>
                 <viewController id="tF4-gJ-Sp8" customClass="SimpleDeleteViewController" sceneMemberID="viewController">
@@ -287,7 +287,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vyD-Fb-xok"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Delete ToDo" id="gD4-gd-dYI">
+                    <navigationItem key="navigationItem" title="Edit ToDo" id="gD4-gd-dYI">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="fHA-uk-wpD"/>
                     </navigationItem>
                 </viewController>
