@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ToDoTableViewController.h"
 
+//add delegate? : NSObject <ArrayDataProtocol>
 @interface TodoMachine : NSObject
 
 @property NSString *testmessage;

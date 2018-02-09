@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "TodoMachine.h"
 
+@protocol ArrayDataProtocol
+-(void)logDelegate;
+@end
+
 @interface ToDoTableViewController : UITableViewController
 
+//@property (nonatomic) id<ArrayDataProtocol> delegate;
 //@property (nonatomic) TodoMachine *todomachine;
 
 @end

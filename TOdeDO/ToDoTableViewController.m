@@ -12,6 +12,8 @@
 
 @interface ToDoTableViewController ()
 @property (nonatomic) TodoMachine *todomachine;
+@property (nonatomic) NSMutableArray *todosArray;
+@property (nonatomic) NSDictionary *noteDictionary;
 @end
 
 @implementation ToDoTableViewController
@@ -21,6 +23,10 @@
     
     //"Skapa modellen här" -Erik
     self.todomachine = [[TodoMachine alloc] init];
+    
+    
+    NSLog(@"Dictionary: %@", [self.todomachine.noteDictionary description]);
+    NSLog(@"Entered mainview");
      //Test a cellrow
     //self.todomachine.todosArray = @[@{@"noteTitle" : @"Kolla", @"taskNote" : @"jeppejeppa", @"starButtonValue" : @"YES"}, @{@"noteTitle" : @"Tsiigaa", @"taskNote" : @"jut", @"starButtonValue" : @"NO"}].mutableCopy;
 
@@ -39,7 +45,7 @@
      [self performSegueWithIdentifier:@"addSegue" sender:self];
 }
 
-// Osäker om denna behövs?
+// Reloads data to view when entered again?
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.tableView reloadData];
@@ -156,7 +162,10 @@
         ToDoTableViewCell *cell = sender;
         UIViewController *taskEdit = [segue destinationViewController];
         taskEdit.title = cell.todoTitle.text;
-    }
+    }/*else if([segue.identifier isEqualToString:@"addSegue"]){
+        TodoMachine *add = [segue destinationViewController];
+        add.noteDictionary = self.noteDictionary;
+    }*/
     
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.

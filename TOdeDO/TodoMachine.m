@@ -30,11 +30,11 @@
     [self.todosArray addObject:noteDictionary];
     
     //Logs
-    NSLog(@"Entered addTask method!");
+    NSLog(@"Entered addTask method! in TodoMachine");
     //Log dictionary
     NSLog(@"Dictionary: %@", [noteDictionary description]);
     //NS Log Array cotent / count
-    NSLog(@"%@",self.todosArray);
+    //NSLog(@"%@",self.todosArray);
     NSLog(@"%lu",(unsigned long)self.todosArray.count);
     
 }
