@@ -9,8 +9,12 @@
 #import "ToDoTableViewController.h"
 #import "TodoMachine.h"
 #import "ToDoTableViewCell.h"
+#import "SimpleAddViewController.h"
+
 
 @interface ToDoTableViewController ()
+
+///Solution v2, property of todomachine
 @property (nonatomic) TodoMachine *todomachine;
 @property (nonatomic) NSMutableArray *todosArray;
 @property (nonatomic) NSDictionary *noteDictionary;
@@ -21,21 +25,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    //"Skapa modellen här" -Erik
+    ///Solution v2, property of todomachine
     self.todomachine = [[TodoMachine alloc] init];
     
+//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Just do it" important:NO done:NO note:@"buy the nike shoes"]];
+//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Wake up" important:YES done:NO note:@""]];
+//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Run" important:YES done:YES note:@"Looking to do some 15km"]];
     
-    NSLog(@"Dictionary: %@", [self.todomachine.noteDictionary description]);
-    NSLog(@"Entered mainview");
-     //Test a cellrow
-    //self.todomachine.todosArray = @[@{@"noteTitle" : @"Kolla", @"taskNote" : @"jeppejeppa", @"starButtonValue" : @"YES"}, @{@"noteTitle" : @"Tsiigaa", @"taskNote" : @"jut", @"starButtonValue" : @"NO"}].mutableCopy;
 
     //Skapa custom nav patplusbutton
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"patplus.png"] style:UIBarButtonItemStylePlain target:self action:@selector(addNoteButtonPushed:)];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // Display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
@@ -59,12 +62,14 @@
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    return self.todomachine.todosArray.count;
+    NSArray *filterTodos = [self.todomachine getTodosForSection:(int)section];
+    return filterTodos.count;
+    //Only one section in TblView
+    //return self.todomachine.getAllTodos.count;
     
 }
 
@@ -74,49 +79,31 @@
     ToDoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"toDoCell" forIndexPath:indexPath];
     
     // Configure the cell
-    //NSDictionary *theDictionary = self.todomachine.todosArray[indexPath.row];
-    //NSDictionary *theDictionary = [self.todomachine getTaskForRow:indexPath.row];
-    cell.todoTitle.text = self.todomachine.todosArray[indexPath.row];
-    cell.todoNote.text = self.todomachine.todosArray[indexPath.row];
-    cell.todoStar.image = self.todomachine.todosArray[indexPath.row];
-    if ([[self.todomachine.noteDictionary objectForKey:@"starButtonValue"] isEqualToString:@"YES"]) {
+    ///Solution v2,
+    NSArray *filterTodos = [self.todomachine getTodosForSection:(int)indexPath.section];
+    TodoTasks *todoTask = filterTodos[indexPath.row];
+    cell.todoTitle.text = todoTask.title;
+    cell.todoNote.text = todoTask.note;
+    //cell.todoStar.image = (todoTask.important);
+    if (todoTask.important == TRUE) {
         cell.todoStar.image = [UIImage imageNamed:@"patrikStar4.png"];
     }
     
-    /*
-    cell.todoTitle.text = theDictionary[@"noteTitle"];
-    cell.todoNote.text = theDictionary[@"taskNotes"];
-     */
-    
-    //Logs
-    //NSLog(@"Dictionary: %@", [theDictionary description]);
-    /*//Test configure cell
-    cell.todoTitle.text = [self.todomachine.noteDictionary objectForKey:@"noteTitle"];
-    cell.todoNote.text = [self.todomachine.noteDictionary objectForKey:@"taskNotes"];
-    if ([[self.todomachine.noteDictionary objectForKey:@"starButtonValue"] isEqualToString:@"YES"]) {
-        cell.todoStar.image = [UIImage imageNamed:@"patrikStar4.png"];
-    }*/
-    
-    // Configure the cell
-    //NSMutableArray *toDoArray = [[NSMutableArray alloc]init];
-    //NSDictionary *theDictionary = [self.todomachine getTaskForRow:indexPath.row];
-    
-    /*for (NSString *text in self.todomachine.todos) {
-        NSLog(@"%@",text);
-    }
-    cell.todoTitle.text = [theDictionary objectForKey:@"noteTitle"];
-    cell.todoNote.text = [theDictionary objectForKey:@"taskNotes"];
-    if ([[theDictionary objectForKey:@"starButtonValue"] isEqualToString:@"YES"]) {
-        cell.todoStar.image = [UIImage imageNamed:@"patrikStar4.png"];
-        
-    // Test section and row index outcommented
-    //cell.textLabel.text = [NSString stringWithFormat:@"Section %ld, row %ld", indexPath.section, indexPath.row];
-    }*/
-    
+    //Only one list
+    //TodoTasks *todoTask = self.todomachine.getAllTodos[indexPath.row];
+ 
     return cell;
 }
 
-
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == sectionTodo) {
+        return @"Todo";
+    } else if(section == sectionDone) {
+        return @"Done";
+    }else {
+        return @"";
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -157,6 +144,9 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    SimpleAddViewController *add = segue.destinationViewController;
+    add.todomachine = self.todomachine;
     
     if([segue.identifier isEqualToString:@"editSegue"]) {
         ToDoTableViewCell *cell = sender;

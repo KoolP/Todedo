@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5FABE8062048514B009B36C7 /* TodoTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FABE8052048514B009B36C7 /* TodoTasks.m */; };
 		94445BC2201B221400057B03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94445BC1201B221400057B03 /* AppDelegate.m */; };
 		94445BC8201B221400057B03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94445BC6201B221400057B03 /* Main.storyboard */; };
 		94445BCA201B221400057B03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94445BC9201B221400057B03 /* Assets.xcassets */; };
 		94445BCD201B221400057B03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94445BCB201B221400057B03 /* LaunchScreen.storyboard */; };
 		94445BD0201B221400057B03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94445BCF201B221400057B03 /* main.m */; };
 		94445BD8201B260500057B03 /* TodoMachine.m in Sources */ = {isa = PBXBuildFile; fileRef = 94445BD7201B260500057B03 /* TodoMachine.m */; };
-		94445BE1201B78CD00057B03 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94445BE0201B78CD00057B03 /* TestViewController.m */; };
 		94E3C6EE201F3CD3001C84EB /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6E4201F3CCB001C84EB /* OpenSans-LightItalic.ttf */; };
 		94E3C6EF201F3CD3001C84EB /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6E5201F3CCC001C84EB /* OpenSans-SemiBold.ttf */; };
 		94E3C6F0201F3CD3001C84EB /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 94E3C6E6201F3CCC001C84EB /* OpenSans-Light.ttf */; };
@@ -32,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5FABE8042048514B009B36C7 /* TodoTasks.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoTasks.h; sourceTree = "<group>"; };
+		5FABE8052048514B009B36C7 /* TodoTasks.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoTasks.m; sourceTree = "<group>"; };
 		94445BBD201B221400057B03 /* TOdeDO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOdeDO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94445BC0201B221400057B03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94445BC1201B221400057B03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,8 +44,6 @@
 		94445BCF201B221400057B03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		94445BD6201B260500057B03 /* TodoMachine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TodoMachine.h; sourceTree = "<group>"; };
 		94445BD7201B260500057B03 /* TodoMachine.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoMachine.m; sourceTree = "<group>"; };
-		94445BDF201B78CD00057B03 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		94445BE0201B78CD00057B03 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		94E3C6E4201F3CCB001C84EB /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
 		94E3C6E5201F3CCC001C84EB /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		94E3C6E6201F3CCC001C84EB /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
@@ -108,13 +108,13 @@
 				94E3C70720271E68001C84EB /* ToDoTableViewCell.m */,
 				94E3C6F8201F4223001C84EB /* SimpleAddViewController.h */,
 				94E3C6F9201F4223001C84EB /* SimpleAddViewController.m */,
-				94445BDF201B78CD00057B03 /* TestViewController.h */,
-				94445BE0201B78CD00057B03 /* TestViewController.m */,
 				94445BC9201B221400057B03 /* Assets.xcassets */,
 				94E3C6E3201F3C01001C84EB /* Fonts */,
 				94445BCB201B221400057B03 /* LaunchScreen.storyboard */,
 				94445BCE201B221400057B03 /* Info.plist */,
 				94445BCF201B221400057B03 /* main.m */,
+				5FABE8042048514B009B36C7 /* TodoTasks.h */,
+				5FABE8052048514B009B36C7 /* TodoTasks.m */,
 			);
 			path = TOdeDO;
 			sourceTree = "<group>";
@@ -222,9 +222,9 @@
 				94445BD0201B221400057B03 /* main.m in Sources */,
 				94445BC2201B221400057B03 /* AppDelegate.m in Sources */,
 				94E3C70520211B33001C84EB /* ToDoTableViewController.m in Sources */,
+				5FABE8062048514B009B36C7 /* TodoTasks.m in Sources */,
 				94445BD8201B260500057B03 /* TodoMachine.m in Sources */,
 				94E3C6FA201F4223001C84EB /* SimpleAddViewController.m in Sources */,
-				94445BE1201B78CD00057B03 /* TestViewController.m in Sources */,
 				94E3C6FD201F5F3C001C84EB /* SimpleDeleteViewController.m in Sources */,
 				94E3C70820271E68001C84EB /* ToDoTableViewCell.m in Sources */,
 			);

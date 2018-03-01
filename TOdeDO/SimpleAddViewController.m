@@ -57,7 +57,10 @@
         } else {
             priority = @"NO";
         }
-        [self.todomachine addTask:self.addTitle.text taskNotes:self.notesTextView.text starButton:priority];
+        [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:self.addTitle.text important:self.importantTask2 done:NO note:self.notesTextView.text]];
+        
+        //Old add
+        //[self.todomachine addTask:self.addTitle.text taskNotes:self.notesTextView.text starButton:priority];
         
         /*UITextField self.addTitle =
         

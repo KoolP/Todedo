@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ToDoTableViewController.h"
+///Solution v2, import todotask
+#import "TodoTasks.h"
+
+static const int sectionTodo = 0;
+static const int sectionDone = 1;
 
 //add delegate? : NSObject <ArrayDataProtocol>
 @interface TodoMachine : NSObject
@@ -20,5 +25,13 @@
 
 - (NSInteger) numberOfTasks;
 - (NSDictionary*)getTaskForRow:(NSInteger)rowNumber;
+
+///Solution v2, init method
+-(instancetype)init;
+-(void)addTodo:(TodoTasks*)todoTask;
+///getter som returnerar immutable mode
+-(NSArray*)getAllTodos;
+-(NSArray *)getTodosForSection:(int)section;
+
 
 @end

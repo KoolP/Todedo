@@ -8,8 +8,71 @@
 
 #import "TodoMachine.h"
 
+///Solution v2, a string that keeps the strign todokey
+NSString *todoSaveKey = @"Todos";
+
+
+///Solution v2, extra private interface
+@interface TodoMachine ()
+@property (nonatomic) NSMutableArray *todos;
+@end
+
+
 
 @implementation TodoMachine
+
+///Solution v2, extra private interface
+- (instancetype)init {
+    self = [super init];
+    if(self) {
+        NSData *data = [[self defaults] objectForKey:todoSaveKey];
+        //convert back to mutable array
+        self.todos = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        self.todos = [[self defaults] objectForKey:todoSaveKey];
+        if(!self.todos) {
+            self.todos = [[NSMutableArray alloc] init];
+        }
+    }
+    return self;
+}
+
+///Solution v2, private getter for NSUserdefaults for global use
+-(NSUserDefaults*)defaults {
+    return [NSUserDefaults standardUserDefaults];
+}
+
+///Solution v2, add method
+-(void)addTodo:(TodoTasks *)todoTask {
+    [self.todos addObject:todoTask];
+    [self save];
+}
+
+///Solution v2, save task method, Först konvertera till NSData blobdata sedan spara
+-(void)save {
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.todos];
+    [[self defaults] setObject:data forKey:todoSaveKey];
+}
+
+///Solution v2, get all todos castar om en mutable array till vanlig
+-(NSArray*)getAllTodos {
+    return self.todos;
+}
+
+-(NSArray *)getTodosForSection:(int)section {
+    //manuel filtrering
+    NSMutableArray *result = [[NSMutableArray alloc] init];
+    for(TodoTasks *todoTask in self.todos) {
+        if((section == sectionTodo && !todoTask.done) ||
+           (section == sectionDone && todoTask.done))  {
+            [result addObject:todoTask];
+    }
+    
+}
+
+    return result;
+    
+}
+
 
 /*
 -(void) addNew:(NSString*) note{
@@ -47,21 +110,5 @@
     return self.todosArray.count;
 }
 
-/*//skapa AddedTask dictonary
--(void)fillDictionary: (NSString*)taskTitle taskNotes:(NSString*)taskNote starButton:(BOOL)starButtonValue{
-    NSDictionary *noteDictonary = @{@"noteTitle":taskTitle,@"taskNotes":taskNote,@"starButtonValue":starButtonValue};
-}*/
-
-//self.noteDictonary = [[TodoMachine alloc] init];
-
-
-
-
- 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary *todoItems =
-}
-*/
 
 @end
