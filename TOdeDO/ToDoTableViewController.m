@@ -28,9 +28,9 @@
     ///Solution v2, property of todomachine
     self.todomachine = [[TodoMachine alloc] init];
     
-//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Just do it" important:NO done:NO note:@"buy the nike shoes"]];
-//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Wake up" important:YES done:NO note:@""]];
-//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Run" important:YES done:YES note:@"Looking to do some 15km"]];
+    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Just do it" important:NO done:NO note:@"buy the nike shoes"]];
+    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Wake up" important:YES done:NO note:@""]];
+    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Run" important:YES done:YES note:@"Looking to do some 15km"]];
     
 
     //Skapa custom nav patplusbutton

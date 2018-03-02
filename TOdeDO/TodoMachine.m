@@ -28,7 +28,6 @@ NSString *todoSaveKey = @"Todos";
         NSData *data = [[self defaults] objectForKey:todoSaveKey];
         //convert back to mutable array
         self.todos = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        self.todos = [[self defaults] objectForKey:todoSaveKey];
         if(!self.todos) {
             self.todos = [[NSMutableArray alloc] init];
         }
