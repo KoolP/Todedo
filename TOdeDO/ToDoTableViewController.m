@@ -160,14 +160,14 @@
     SimpleAddViewController *add = segue.destinationViewController;
     add.todomachine = self.todomachine;
     
-    if([segue.identifier isEqualToString:@"editSegue"]) {
-        ToDoTableViewCell *cell = sender;
-        UIViewController *taskEdit = [segue destinationViewController];
-        taskEdit.title = cell.todoTitle.text;
-    }/*else if([segue.identifier isEqualToString:@"addSegue"]){
-        TodoMachine *add = [segue destinationViewController];
-        add.noteDictionary = self.noteDictionary;
-    }*/
+//    if([segue.identifier isEqualToString:@"editSegue"]) {
+//        ToDoTableViewCell *cell = sender;
+//        UIViewController *taskEdit = [segue destinationViewController];
+//        taskEdit.title = cell.todoTitle.text;
+//    }/*else if([segue.identifier isEqualToString:@"addSegue"]){
+//        TodoMachine *add = [segue destinationViewController];
+//        add.noteDictionary = self.noteDictionary;
+//    }*/
     
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
