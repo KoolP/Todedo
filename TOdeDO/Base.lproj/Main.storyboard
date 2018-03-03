@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -73,18 +72,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Vy0-T1-ZUS">
                         <barButtonItem key="backBarButtonItem" title=" " id="Jba-m6-ua2"/>
-                        <rightBarButtonItems>
-                            <barButtonItem systemItem="add" id="a5A-Wz-5ks">
-                                <connections>
-                                    <segue destination="3qV-My-b9p" kind="show" identifier="addSegue" id="UuR-98-9hL"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem title="Item" id="Ahf-0v-0MY">
-                                <connections>
-                                    <segue destination="tTz-Ai-voO" kind="show" id="cQk-HA-mzh"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="a5A-Wz-5ks">
+                            <connections>
+                                <segue destination="3qV-My-b9p" kind="show" identifier="addSegue" id="UuR-98-9hL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="crQ-Pj-YjE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -140,38 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b60-fB-Mi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="-290"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="JdG-Km-ozL">
-            <objects>
-                <viewController id="tTz-Ai-voO" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="XD7-pP-Z1N">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i9X-qg-Rdm">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <textAttributes key="largeTitleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Bringthanoize" family="Bring tha noize" pointSize="20"/>
-                                    <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Title" id="1GY-xJ-cHH"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="PgM-co-kOx"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qsX-3V-gr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2732" y="498"/>
+            <point key="canvasLocation" x="796" y="-290.10494752623691"/>
         </scene>
         <!--Edit ToDo-->
         <scene sceneID="3D9-au-V0D">

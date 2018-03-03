@@ -32,6 +32,7 @@ static const int sectionDone = 1;
 ///getter som returnerar immutable mode
 -(NSArray*)getAllTodos;
 -(NSArray *)getTodosForSection:(int)section;
+-(void)setTaskAsDone:(int)taskIndex;
 
 
 @end

@@ -37,6 +37,7 @@
     // Do any additional setup after loading the view.
 }
 
+
 //Custom star button
 -(void) starButton2Create {
     self.starButton2 = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -47,7 +48,7 @@
     [self.view addSubview:self.starButton2];
 }
 
-//Back button pressed action *test*
+//Back button pressed + addTask action
 - (void)didMoveToParentViewController:(UIViewController *)parent{
     if (parent == NULL) {
         NSLog(@"Back Pressed");
@@ -57,15 +58,11 @@
         } else {
             priority = @"NO";
         }
+        
         [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:self.addTitle.text important:self.importantTask2 done:NO note:self.notesTextView.text]];
         
-        //Old add
-        //[self.todomachine addTask:self.addTitle.text taskNotes:self.notesTextView.text starButton:priority];
+        [self.navigationController popViewControllerAnimated:YES];
         
-        /*UITextField self.addTitle =
-        
-        NSUserDefaults *addTask = [NSUserDefaults standardUserDefaults];
-        [addTask setObject:self.addTitle.text forKey:@"taskTitle"];*/
     }
 }
 

@@ -28,13 +28,14 @@
     ///Solution v2, property of todomachine
     self.todomachine = [[TodoMachine alloc] init];
     
-    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Just do it" important:NO done:NO note:@"buy the nike shoes"]];
-    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Wake up" important:YES done:NO note:@""]];
-    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Run" important:YES done:YES note:@"Looking to do some 15km"]];
+//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Just do it" important:NO done:NO note:@"buy the nike shoes"]];
+//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Wake up" important:YES done:NO note:@""]];
+//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Run" important:YES done:YES note:@"Looking to do some 15km"]];
     
 
     //Skapa custom nav patplusbutton
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"patplus.png"] style:UIBarButtonItemStylePlain target:self action:@selector(addNoteButtonPushed:)];
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -42,16 +43,19 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+
+// Reloads data
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewDidLoad];
+    [super viewWillAppear:animated];
+    NSLog(@"reload activated");
+    [self.tableView reloadData];
+}
+
 // Custom patPlusbutton action
 -(void) addNoteButtonPushed:(UIButton*)sender
 {
      [self performSegueWithIdentifier:@"addSegue" sender:self];
-}
-
-// Reloads data to view when entered again?
--(void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
-    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -105,6 +109,15 @@
     }
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.section == sectionTodo) {
+    [self.todomachine setTaskAsDone:indexPath.row];
+    [self.tableView reloadData];
+} else {
+ //nothing
+}
+
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -144,7 +157,6 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
     SimpleAddViewController *add = segue.destinationViewController;
     add.todomachine = self.todomachine;
     

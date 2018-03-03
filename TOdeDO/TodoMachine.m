@@ -73,6 +73,17 @@ NSString *todoSaveKey = @"Todos";
 }
 
 
+-(void)setTaskAsDone:(int)taskIndex {
+    NSArray *unfinishedTodos = [self getTodosForSection:sectionTodo];
+    TodoTasks *todoTask = unfinishedTodos[taskIndex];
+    todoTask.done = YES;
+    [self save];
+}
+
+
+
+
+
 /*
 -(void) addNew:(NSString*) note{
     [self.todos addObject:note];
