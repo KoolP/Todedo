@@ -61,7 +61,6 @@
                                     <outlet property="todoNote" destination="Ats-id-L5S" id="1p5-Ru-RFC"/>
                                     <outlet property="todoStar" destination="c4s-xO-Rde" id="Pf4-jS-LKQ"/>
                                     <outlet property="todoTitle" destination="Tz4-cR-6g5" id="QtJ-BD-dSk"/>
-                                    <segue destination="tF4-gJ-Sp8" kind="show" identifier="editSegue" id="WqN-WI-uhf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

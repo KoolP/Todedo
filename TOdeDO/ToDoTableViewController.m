@@ -36,6 +36,8 @@
     //Skapa custom nav patplusbutton
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"patplus.png"] style:UIBarButtonItemStylePlain target:self action:@selector(addNoteButtonPushed:)];
     
+    // Disable cell editMode
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,7 +48,7 @@
 
 // Reloads data
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewDidLoad];
+//[super viewDidLoad];
     [super viewWillAppear:animated];
     NSLog(@"reload activated");
     [self.tableView reloadData];
