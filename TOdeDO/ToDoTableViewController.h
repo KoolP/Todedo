@@ -17,5 +17,6 @@
 
 //@property (nonatomic) id<ArrayDataProtocol> delegate;
 //@property (nonatomic) TodoMachine *todomachine;
+//@property (nonatomic) NSMutableArray TodoMachine *todosArray;
 
 @end

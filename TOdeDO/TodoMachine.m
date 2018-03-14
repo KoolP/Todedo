@@ -14,7 +14,7 @@ NSString *todoSaveKey = @"Todos";
 
 ///Solution v2, extra private interface
 @interface TodoMachine ()
-@property (nonatomic) NSMutableArray *todos;
+//@property (nonatomic) NSMutableArray *todosArray;
 @end
 
 
@@ -27,9 +27,9 @@ NSString *todoSaveKey = @"Todos";
     if(self) {
         NSData *data = [[self defaults] objectForKey:todoSaveKey];
         //convert back to mutable array
-        self.todos = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        if(!self.todos) {
-            self.todos = [[NSMutableArray alloc] init];
+        self.todosArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        if(!self.todosArray) {
+            self.todosArray = [[NSMutableArray alloc] init];
         }
     }
     return self;
@@ -42,25 +42,26 @@ NSString *todoSaveKey = @"Todos";
 
 ///Solution v2, add method
 -(void)addTodo:(TodoTasks *)todoTask {
-    [self.todos addObject:todoTask];
+    [self.todosArray addObject:todoTask];
     [self save];
+    NSLog(@"Add todo activated");
 }
 
 ///Solution v2, save task method, Först konvertera till NSData blobdata sedan spara
 -(void)save {
-    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.todos];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.todosArray];
     [[self defaults] setObject:data forKey:todoSaveKey];
 }
 
 ///Solution v2, get all todos castar om en mutable array till vanlig
 -(NSArray*)getAllTodos {
-    return self.todos;
+    return self.todosArray;
 }
 
 -(NSArray *)getTodosForSection:(int)section {
     //manuel filtrering
     NSMutableArray *result = [[NSMutableArray alloc] init];
-    for(TodoTasks *todoTask in self.todos) {
+    for(TodoTasks *todoTask in self.todosArray) {
         if((section == sectionTodo && !todoTask.done) ||
            (section == sectionDone && todoTask.done))  {
             [result addObject:todoTask];

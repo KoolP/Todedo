@@ -16,7 +16,7 @@
 
 ///Solution v2, property of todomachine
 @property (nonatomic) TodoMachine *todomachine;
-@property (nonatomic) NSMutableArray *todosArray;
+//@property (nonatomic) NSMutableArray *todosArray;
 @property (nonatomic) NSDictionary *noteDictionary;
 @end
 
@@ -28,28 +28,17 @@
     ///Solution v2, property of todomachine
     self.todomachine = [[TodoMachine alloc] init];
     
-//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Just do it" important:NO done:NO note:@"buy the nike shoes"]];
-//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Wake up" important:YES done:NO note:@""]];
-//    [self.todomachine addTodo:[[TodoTasks alloc] initWithTitle:@"Run" important:YES done:YES note:@"Looking to do some 15km"]];
-    
 
     //Skapa custom nav patplusbutton
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"patplus.png"] style:UIBarButtonItemStylePlain target:self action:@selector(addNoteButtonPushed:)];
     
-    // Disable cell editMode
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    // Display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 
 // Reloads data
-- (void)viewWillAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
 //[super viewDidLoad];
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
     NSLog(@"reload activated");
     [self.tableView reloadData];
 }

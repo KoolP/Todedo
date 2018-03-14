@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.todomachine = [[TodoMachine alloc] init];
+    //self.todomachine = [[TodoMachine alloc] init];
     [self.addTitle becomeFirstResponder];
     [self starButton2Create];
     self.importantTask2 = NO;
